@@ -1,0 +1,659 @@
+$yellow: #efb74a;
+$black: #000000;
+$overlay: #0b0b0b;
+$lightgrey: #ececec;
+$white: #ffffff;
+$darkgrey: #3f3f3f;
+$grey: #b4b4b4;
+
+$roboto: "Roboto", sans-serif;
+$fjalla: "Fjalla One", sans-serif;
+$lato: "Lato", sans-serif;
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  outline: 0px !important;
+}
+
+body {
+  font-family: $lato;
+  font-size: 15px;
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+h1,
+h3 {
+  font-family: $roboto;
+}
+
+h2,
+h4,
+h5 {
+  font-family: $fjalla;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+#ordertabscontent -webkit-scrollbar-track, #ordertabs -webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+#ordertabscontent ::-webkit-scrollbar, #ordertabs ::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: #f5f5f5;
+  @media screen and (max-width: 768px) {
+    height: 0px;
+  }
+}
+
+#ordertabscontent ::-webkit-scrollbar-thumb, #ordertabs ::-webkit-scrollbar-thumb {
+  background-color: $yellow!important;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: $roboto;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.cta {
+	border-radius: 6px;
+    background-color: #d2aa12;
+    background-image: url(../images/scooter.png);
+    background-position: 2% center;
+    background-size: 15%;
+    background-repeat: no-repeat;
+    color: #000000;
+    text-decoration: none;
+    padding: 7px 5px 5px 59px;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 27px;
+    margin-left: 24px;
+}
+
+#sticky {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  padding-top: 32px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0px;
+  }
+  .navbar {
+    background: none;
+    .navbar-toggler-icon {
+      margin-top: -30px;
+      background-image: url(../images/menu-icon.png);
+    }
+
+    &.navbar-expand-lg {
+      @media screen and (max-width: 768px) {
+        background: $darkgrey !important;
+        .nav-link {
+          color: $white;
+        }
+        .navbar-text {
+          display: none;
+        }
+      }
+    }
+    .container {
+      .navbar-brand {
+        display: block;
+        width: 119px;
+        height: 79px;
+        background: url(../images/logo_branco.png) center center no-repeat;
+        margin-right: 56px;
+        background-size: contain;
+
+        @media screen and (max-width: 768px) {
+          margin-right: 0px;
+          margin: 0 auto;
+        }
+      }
+
+      .navbar-toggler {
+        border: 0px;
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+
+      .collapse {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              font-family: $fjalla;
+              font-size: 20px;
+              line-height: 1.5;
+              letter-spacing: 1.4px;
+              text-transform: uppercase;
+              margin-right: 40px;
+            }
+          }
+        }
+
+        .navbar-text {
+          @media screen and(max-width: 1024px) {
+            display: none;
+          }
+          .btn {
+            opacity: 0.8;
+            border-radius: 6px;
+            box-shadow: 2.3px 1.9px 1.9px 0.1px #0000009c;
+            border: solid 1px #707070b0;
+            background-color: $white;
+            color: $darkgrey;
+            font-family: $fjalla;
+            margin-left: 10px;
+            position: relative;
+            padding-left: 50px;
+            border: 0px;
+            overflow: hidden;
+
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 100%;
+              left: 0px;
+              top: 0px;
+              width: 45px;
+              background: url(../images/scooter.png) center center no-repeat
+                $yellow;
+            }
+            &:last-of-type {
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                width: 45px;
+                background: url(../images/booked.png) center center no-repeat
+                  $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    background: $lightgrey;
+    padding-top: 0px;
+    position: fixed;
+    transition: padding ease-in-out 0.3s;
+
+    .navbar .container .navbar-brand {
+      background: url(../images/logo_preto.png) center center no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 768px) {
+        background: url(../images/logo_branco.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .nav-link {
+      font-family: $fjalla;
+      color: $black;
+      font-size: 20px;
+      line-height: 1.5;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-right: 40px;
+    }
+    @media screen and (max-width: 768px) {
+      background: url(../images/bg-menu-mobile.png) center bottom;
+    }
+  }
+}
+
+.hero {
+  background: url(../images/index_fundo.png);
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    h1 {
+      color: $white;
+      text-shadow: 2.6px 3px 7.4px #0000006e;
+      font-family: Roboto;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $white;
+      font-size: 20px;
+      letter-spacing: 0.8px;
+      text-shadow: 2.6px 3px 7.4px #0000006e;
+    }
+  }
+}
+
+#about {
+  padding: 90px 0px;
+  h4 {
+    font-family: $roboto;
+    font-size: 15px;
+  }
+
+  .infos {
+    margin-top: 64px;
+
+    ul,
+    p {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+
+    h4 {
+      font-family: $fjalla;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: bold;
+      &:last-of-type {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 64px;
+  }
+
+  .metrics {
+    border-radius: 6px;
+    box-shadow: 2.3px 1.9px 2.8px 0.2px #0000002e;
+    border: solid 1px #cfcfcfb0;
+    margin-bottom: 24px;
+
+    .header {
+      background: #feedc9;
+      padding: 3px 5px;
+      text-align: center;
+      img {
+        height: 20px;
+        width: auto;
+        margin-right: 10px;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10px;
+
+      .note {
+        color: $darkgrey;
+        text-align: center;
+        .cycle {
+          display: block;
+          padding-top: 12px;
+          font-family: $roboto;
+          font-weight: 400;
+          margin-bottom: 5px;
+          width: 45px;
+          height: 45px;
+          border: 2px solid;
+          vertical-align: center;
+          text-align: center;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          &.red {
+            border-color: #ec836b;
+          }
+          &.yellow {
+            border-color: #fae48e;
+          }
+          &.blue {
+            border-color: #44b2c0;
+          }
+        }
+        .label {
+          display: block;
+          text-transform: uppercase;
+          font-size: 11px;
+          font-family:$roboto;
+          font-weight:900;
+        }
+      }
+    }
+  }
+
+  .awards {
+    border-radius: 6px;
+    box-shadow: 2.3px 1.9px 2.8px 0.2px #0000002e;
+    border: solid 1px #cfcfcfb0;
+
+    .header {
+      background: $lightgrey;
+      padding: 3px 5px;
+    }
+    .content {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+
+  .evaluation {
+    background: url(../images/aspa.png) 3% 8% no-repeat;
+    border-radius: 6px;
+    box-shadow: 2.3px 1.9px 2.8px 0.2px #0000002e;
+    border: solid 1px #cfcfcfb0;
+    padding: 60px 30px 20px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 274px;
+    .message {
+      font-family: Lato;
+      font-size: 13.5px;
+      font-style: italic;
+      line-height: 1.93;
+
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    .author {
+      margin: 0px;
+      font-size: 14px;
+      line-height: 19px;
+      small {
+        display: flex;
+        align-items: center;
+      }
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+#orderMenu {
+  background: url(../images/cardapio_fundo.png);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  color: #fff;
+  padding: 110px 0;
+
+  .container {
+    .section-header {
+      display: flex;
+      .section-title {
+        color: #fff;
+      }
+    }
+
+    .section-nav {
+      background: $lightgrey;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border: 0px;
+      .nav-item {
+        width: auto;
+        .nav-link {
+          font-family: $fjalla;
+          font-size: 20px;
+          line-height: 1.5;
+          text-transform: uppercase;
+          color: $darkgrey;
+          padding: 22px 14px 14px;
+          white-space: nowrap;
+          &.active {
+            color: $black;
+            background: none;
+            border: 0px;
+            border-bottom: solid 6px $yellow;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        padding-top: 16px;
+        max-height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media screen and (max-width: 768px) {
+          padding-right: 12px;
+        }
+        .item {
+          display: flex;
+          margin-top: 56px;
+          .featured {
+            width: 110px;
+            height: 110px;
+            margin-right: 16px;
+          }
+
+          .item-content {
+            .item-header {
+              display: flex;
+              h4,
+              h5 {
+                font-family: $fjalla;
+                font-size: 17px;
+                line-height: 1.68;
+              }
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            .item-content {
+              p {
+                font-family: $lato;
+                font-size: 14.5px;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#reservation {
+  background: $lightgrey;
+  .container {
+    padding: 100px 66px;
+    @media screen and (max-width: 768px) {
+      padding: 100px 16px;
+    }
+    .section-title {
+      margin-bottom: 36px;
+    }
+
+    .reservation-rules {
+      .title {
+        font-family: $fjalla;
+        font-size: 18px;
+        line-height: 1.22;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        &:before {
+          content: "";
+          display: inline-block;
+          background: url(../images/booked.png) center center no-repeat;
+          width: 32px;
+          height: 16px;
+        }
+      }
+
+      p {
+        font-family: $lato;
+        font-size: 15px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+#photos {
+  position: relative;
+  .container {
+    .section-title {
+      color: $white;
+      padding-top: 56px;
+    }
+  }
+  .section-header {
+    position: absolute !important;
+    width: 100%;
+    z-index: 3;
+    top: -30px;
+    left: 0px;
+  }
+  .carousel {
+    img {
+      object-fit: cover;
+      max-height: 550px;
+    }
+  }
+}
+
+#contact {
+  margin-top: 72px;
+  position: relative;
+  padding-bottom: 120px;
+
+  .contact-infos,
+  ul {
+    display: flex;
+
+    li {
+      padding: 0px 5px;
+    }
+
+    &.social-infos {
+      margin-top: 36px;
+    }
+  }
+  .container {
+    p {
+      font-family: $lato;
+      font-size: 15px;
+    }
+
+    .cta {
+      background: url(../images/booked.png) 5% center no-repeat $grey;
+      background-size: 20%;
+      width: auto;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  }
+}
+
+.fixed-footer {
+  display: none;
+  position: fixed;
+  padding: 20px 0;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.56+100 */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.56) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.56) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.56) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#8f000000',GradientType=0 ); /* IE6-9 */
+
+  @media screen and(max-width: 1024px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn {
+    opacity: 0.8;
+    border-radius: 6px;
+    box-shadow: 2.3px 1.9px 1.9px 0.1px #0000009c;
+    border: solid 1px #707070b0;
+    background-color: $white;
+    color: $darkgrey;
+    font-family: $fjalla;
+    margin-left: 10px;
+    position: relative;
+    padding-left: 50px;
+    border: 0px;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      width: 45px;
+      background: url(../images/scooter.png) center center no-repeat $yellow;
+    }
+    &:last-of-type {
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        width: 45px;
+        background: url(../images/booked.png) center center no-repeat $yellow;
+      }
+    }
+  }
+}
