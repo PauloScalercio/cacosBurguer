@@ -706,7 +706,7 @@ ul {
 .credits{
   height: 30px;
   text-align: right;
-  background-color: #E5E3E4; 
+  background-color: #CCC; 
 }
 .weSeek::before{
   display:inline-block;
