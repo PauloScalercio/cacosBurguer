@@ -260,7 +260,8 @@ ul {
 
 #about {
   padding: 90px 0px;
-  background-color: #E5E3E4;
+  color: #E5E3E4;
+  background-color: #4c4c4c;
 }
 
 #about h4 {
@@ -550,7 +551,8 @@ ul {
 }
 
 #reservation {
-  background: #E5E3E4;
+  background-color: #4c4c4c;
+  color: #E5E3E4;
 }
 
 #reservation .container {
@@ -581,6 +583,7 @@ ul {
   background: url(../images/booked.png) center center no-repeat;
   width: 32px;
   height: 16px;
+  filter: invert(100%)
 }
 
 #reservation .container .reservation-rules p {
@@ -616,7 +619,8 @@ ul {
  padding-top: 72px;
   position: relative;
   padding-bottom: 120px;
-  background-color: #E5E3E4;
+  background-color: #4C4C4C;
+  color: #E5E3E4;
 }
 
 #contact .contact-infos,
@@ -648,6 +652,7 @@ ul {
   width: auto;
   white-space: nowrap;
   text-decoration: none;
+  background-color:#E5E3E4;
 }
 
 .fixed-footer {
@@ -704,33 +709,34 @@ ul {
   margin:5px 0 0 0;
 }
 .credits{
-  height: 30px;
+  font-size: 13px;
+  height: 20px;
   text-align: right;
-  background-color: #CCC; 
+  background-color: #E5E3E4; 
 }
 .weSeek::before{
   display:inline-block;
-  height:20px;
-  width:20px;
+  height:15px;
+  width:15px;
   margin-right: 5px;
   content: "";
   background:url('../images/icon-weseek.png') no-repeat 0 0;
-  background-size: 20px 20px;
+  background-size: 15px 15px;
 
 }
 .wpp::before{
   display:inline-block;
-  height:20px;
-  width:20px;
+  height:15px;
+  width:15px;
   margin: 0 5px;
   content: "";
   background:url('../images/whatsapp.svg') no-repeat 0 0;
-  background-size: 20px 20px;
+  background-size: 15px 15px;
 }
 .wpp{
   margin-right: 5px;
 }
-.wpp a {
+.credits a {
   color: inherit;
   text-decoration: none;
 }
