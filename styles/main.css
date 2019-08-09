@@ -416,6 +416,7 @@ ul {
           justify-content: space-between;
   min-height: 274px;
   background-color: #fff;
+  color: #4c4c4c;
 }
 
 #about .evaluation .message {
