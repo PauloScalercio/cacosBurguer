@@ -722,7 +722,7 @@ ul {
   left: 0px;
   top: 0px;
   width: 45px;
-  background: url(../images/catering.png) center center no-repeat #e68040;
+  background: url(../images/catering.svg) center center no-repeat #e68040;
   filter: invert(100%);
 }
 
@@ -746,28 +746,29 @@ ul {
   margin:5px 0 0 0;
 }
 .credits{
-  height: 30px;
+  font-size: 13px;
+  height: 20px;
   text-align: right;
-  background-color: #cccccc; 
+  background-color: #E5E3E4; 
 }
 .weSeek::before{
   display:inline-block;
-  height:20px;
-  width:20px;
+  height:15px;
+  width:15px;
   margin-right: 5px;
   content: "";
   background:url('../images/icon-weseek.png') no-repeat 0 0;
-  background-size: 20px 20px;
+  background-size: 15px 15px;
 
 }
 .wpp::before{
   display:inline-block;
-  height:20px;
-  width:20px;
+  height:15px;
+  width:15px;
   margin: 0 5px;
   content: "";
   background:url('../images/whatsapp.svg') no-repeat 0 0;
-  background-size: 20px 20px;
+  background-size: 15px 15px;
 }
 .wpp{
   margin-right: 5px;
@@ -775,6 +776,9 @@ ul {
 .wpp a {
   color: inherit;
   text-decoration: none;
+}
+.ml-0{
+  margin-left: 0;
 }
 @media(max-width: 1200px){
   .btn-default:last-child{
@@ -784,6 +788,32 @@ ul {
 @media(max-width:1024px){
   .credits{
     text-align: center;
-    height: 120px;
+    height: 100px;
+  }
+}
+@media(max-width:390px){
+  .cta{  
+    height:45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reservation-rules{
+    margin-top: 20px;
+  }
+  .reserva {
+    margin-top:20px;
+    margin-left: 0px;
+  }
+  .contact-infos.social-infos{
+    margin-left: 0px;
+  }
+
+  .contact-infos.social-infos p{
+    width: 360px ;
+  }
+}
+@media screen and (max-width: 413px){
+  .credits{
+    height: 150px;
   }
 }
