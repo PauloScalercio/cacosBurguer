@@ -469,7 +469,11 @@ ul {
 }
 
 #orderMenu {
-  background: url(../images/cardapio_fundo.png);
+  width: 100%;
+  vertical-align: middle;
+  background: url(../images/cardapio_fundo.png) no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
   -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
           box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   background-size: cover;
