@@ -705,6 +705,7 @@ ul {
   padding-right: 30px;
   border: 0px;
   overflow: hidden;
+
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -726,7 +727,7 @@ ul {
   text-decoration: none;
 }
 @media(max-width: 1200px){
-  .btn-default:last-child{
+  .btn-default{
     margin-top:5px;
   }
 }
@@ -739,7 +740,23 @@ ul {
 @media(max-width:390px){
   .cta{  
     height:45px;
+    padding-top: 16px;
   }
+  .reserva{
+    padding-top: 16px;
+  }
+}
+@media(max-width:360px){
+ #orderMenu .cta{
+  padding-top: 10px;
+}
+ }
+  
+@media(max-width:420px){
+  .btn-default:last-child{
+    margin-right: 10px;
+  }
+
 }
 @media screen and (max-width: 768px) {
   .reservation-rules{
@@ -754,7 +771,10 @@ ul {
   }
 
   .contact-infos.social-infos p{
-    width: 360px ;
+    width: 360px;
+  }
+  .contact-infos.social-infos{
+    margin-left: 0!important;
   }
 }
 @media screen and (max-width: 413px){
@@ -762,3 +782,4 @@ ul {
     height: 150px;
   }
 }
+
